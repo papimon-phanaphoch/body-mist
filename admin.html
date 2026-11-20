@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>รายการสั่งซื้อ — Body Scent</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* เฉพาะหน้าแอดมิน */
+    .page-head { padding: var(--space-6) 0 var(--space-4); }
+    .page-head h1 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 0; }
+    .page-head .rule { margin-bottom: var(--space-2); }
+    .page-head p { margin: 0; }
+    .admin-section { padding: 0 0 var(--space-6); }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--ivory);
+    }
+    #ordersTable {
+      width: 100%;
+      min-width: 820px;
+      border-collapse: collapse;
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+    #ordersTable th {
+      text-align: left;
+      font-family: var(--font-serif-th);
+      font-weight: 500;
+      color: var(--ink);
+      background: var(--cream);
+      border-bottom: 1px solid var(--line-strong);
+      padding: var(--space-2);
+      white-space: nowrap;
+    }
+    #ordersTable td {
+      vertical-align: top;
+      color: var(--ink-soft);
+      border-bottom: 1px solid var(--line);
+      padding: var(--space-2);
+      overflow-wrap: anywhere;
+    }
+    #ordersTable tbody tr:last-child td { border-bottom: 0; }
+    #ordersTable td:first-child { white-space: nowrap; }
+
+    @media (max-width: 640px) {
+      .page-head { padding: var(--space-5) 0 var(--space-3); }
+      .admin-section { padding-bottom: var(--space-5); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">BODY SCENT</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>รายการสั่งซื้อ</h1>
+        <span class="rule"></span>
+        <p>เรียงจากรายการล่าสุดขึ้นก่อน</p>
+      </div>
+    </section>
+
+    <section class="admin-section">
+      <div class="container">
+        <div class="table-wrap">
+          <table id="ordersTable">
+            <thead>
+              <tr>
+                <th scope="col">วันเวลา</th>
+                <th scope="col">ชื่อลูกค้า</th>
+                <th scope="col">เบอร์โทร/Line</th>
+                <th scope="col">รายการสินค้า</th>
+                <th scope="col">จำนวนเงินรวม</th>
+                <th scope="col">หมายเหตุ</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Body Scent</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

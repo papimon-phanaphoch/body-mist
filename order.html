@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สั่งซื้อสินค้า — Body Scent</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* เฉพาะหน้าสั่งซื้อ */
+    .page-head { padding: var(--space-6) 0 var(--space-4); }
+    .page-head h1 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 0; }
+    .page-head .rule { margin-bottom: var(--space-2); }
+    .page-head p { margin: 0; }
+    .order-section { padding: 0 0 var(--space-6); }
+    #items { min-height: 84px; }
+    .field-hint { font-size: 0.85rem; color: var(--ink-faint); margin: 0; }
+    .form-actions { display: grid; gap: var(--space-2); margin-top: var(--space-1); }
+    .form-actions .back-link { font-size: 0.9rem; text-align: center; }
+
+    @media (max-width: 640px) {
+      .page-head { padding: var(--space-5) 0 var(--space-3); }
+      .order-section { padding-bottom: var(--space-5); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">BODY SCENT</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>สั่งซื้อสินค้า</h1>
+        <span class="rule"></span>
+        <p>กรอกข้อมูลของคุณเพื่อยืนยันคำสั่งซื้อ</p>
+      </div>
+    </section>
+
+    <section class="order-section">
+      <div class="container">
+        <form id="orderForm" class="form">
+          <div class="field">
+            <label for="customerName">ชื่อลูกค้า</label>
+            <input type="text" id="customerName" name="customerName" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="contact">เบอร์โทร / Line</label>
+            <input type="text" id="contact" name="contact" autocomplete="off" required>
+          </div>
+
+          <div class="field">
+            <label for="items">รายการสินค้า</label>
+            <textarea id="items" name="items" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="total">จำนวนเงินรวม (บาท)</label>
+            <input type="number" id="total" name="total" min="0" inputmode="numeric" required>
+            <p class="field-hint">ระบบเติมรายการและราคาให้อัตโนมัติจากสินค้าที่คุณเลือก</p>
+          </div>
+
+          <div class="field">
+            <label for="note">หมายเหตุ</label>
+            <textarea id="note" name="note"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn--solid btn--block">ยืนยันสั่งซื้อ</button>
+            <a class="back-link" href="product.html">กลับไปเลือกสินค้า</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Body Scent</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

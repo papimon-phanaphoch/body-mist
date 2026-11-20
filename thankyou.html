@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ขอบคุณสำหรับการสั่งซื้อ — Body Scent</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* เฉพาะหน้าขอบคุณ */
+    .thanks {
+      min-height: calc(100vh - 76px);
+      min-height: calc(100svh - 76px);
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%);
+    }
+    .thanks h1 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 0; }
+    .thanks p { margin-bottom: var(--space-4); }
+
+    @media (max-width: 640px) {
+      .thanks { min-height: calc(100vh - 64px); min-height: calc(100svh - 64px); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">BODY SCENT</a>
+      <nav class="nav" aria-label="เมนูหลัก">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="thanks">
+      <div class="container">
+        <h1>ขอบคุณสำหรับการสั่งซื้อ</h1>
+        <span class="rule"></span>
+        <p>เราได้รับคำสั่งซื้อของคุณเรียบร้อยแล้ว</p>
+        <a class="btn" href="index.html">กลับหน้าแรก</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Body Scent</p>
+    </div>
+  </footer>
+
+</body>
+</html>
